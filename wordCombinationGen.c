@@ -89,7 +89,7 @@ int main() {
 
     // Call the generateNumbers function
     generateNumbers(digits, 0, 7 , file , word);
-
+    printf("Done Generating\n")
     // Close the file
     fclose(file);
 
