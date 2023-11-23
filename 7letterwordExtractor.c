@@ -3,6 +3,62 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+int main(){
+    FILE *sevenletterWordsFile;
+    FILE *wordalphaFile;
+    char sevenletterWord[20];
+    
+    if(!(wordalphaFile = fopen("words_alpha.txt", "r"))){
+        printf("Error opening word alpha file \n");
+        return 1;
+    }
+    
+    if(!(sevenletterWordsFile = fopen("sevenletterWords.txt", "w"))){
+        printf("Error opening sevenletterWords file \n");
+        return 1;
+    }
+
+
+    while (!(fscanf(wordalphaFile, "%s" , sevenletterWord) == EOF)){
+        sevenletterWord[8] = '\0';
+        if(strlen(sevenletterWord) == 7)
+            fprintf(sevenletterWordsFile, "%s\n", sevenletterWord);
+    }
+    printf("Done Extracting\n");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 void add_Word(char *, FILE *);
 void add_number(char *, FILE *);
 
@@ -52,4 +108,4 @@ void add_Word(char *word , FILE *fp){
 
 void add_number(char *numberCombination, FILE *fp){
     fprintf(fp, "%s\n", numberCombination);
-}
+}*/
