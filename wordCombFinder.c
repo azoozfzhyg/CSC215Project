@@ -5,6 +5,8 @@
 
 int isword(char *word, char *upperbound, char *lowerbound, FILE *thewordsfile);
 void generateWords(int number[], char word[], int index, FILE *thewordsfile);
+void getlower(char lower[], int number[]);
+void getupper(char upper[], int number[]);
 
 int main()
 {
