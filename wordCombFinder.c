@@ -79,7 +79,7 @@ void generateWords(char *number, char *word, int index, FILE *file, int *apperan
     if (index == 7){
         if(isword(word,file)){
         printf("%s\n", word);
-        apperance++;
+        (*apperance)++;
         }
         rewind(file);
         return;
